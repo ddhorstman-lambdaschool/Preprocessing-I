@@ -55,18 +55,26 @@ table {
 	flex-flow:@flow;
 	justify-content: @justify;
 }
-
+.bottomborder() {
+	border-bottom: 1px solid @regular-text;
+}
+@light-background:hsl(39, 100%, 90%);
+@dark-background:hsl(39,100%, 50%);
+@regular-text:green;
+@mobile-breakpoint: 500px;
+@phone: ~"(max-width:500px)";
 * {
     box-sizing: border-box;
 }
 html, body {
 	height: 100%;
 }
+
 body {
 	font-size: 20px;
 	width:90%;
 	margin:auto;
-	color:black;
+	color:@regular-text;
 	nav {
 		font-size:20px;
 		.flex(row nowrap,flex-end);
@@ -89,46 +97,66 @@ body {
 		padding-bottom:10px;
 	}
 	.profile-picture {
-		width:25%;
+		width:300px;
 	}
 	#home {
 		width:100%;
 		.flex(column nowrap, flex-start);
-		background:lightgrey;
+		background:@light-background;
 		margin:auto;
 		padding:20px;
+		@media @phone{
+			text-align: center;
+			* {
+				width:100%;
+			}
+		}
 		h1 {
 			font-size:90px;
 		}
 		h2 {
-			border-bottom: 1px solid black;
+			.bottomborder();
 		}
 
 	}
 	#about {
 		.flex(row nowrap, space-between);
-		> * {
+		@media @phone{
+			flex-flow:column nowrap;
+		}
+		& > * {
 			width:48%;
+			@media @phone{
+				width:100%;
+			}
 		}
 		ul li {
-			border: 1px solid lightgrey;
+			border: 1px solid @light-background;
 			padding:15px;
 		}
 	}
 	#experience {
 		table {
 			width:100%;
-			border-bottom: 1px solid black;
-			border-top: 1px solid black;
+			.bottomborder();
+			border-top: 1px solid @regular-text;
+			
 			tr {
-				border-bottom: 1px solid grey;
+				@media @phone{
+					:last-child {
+						display:none;
+					}
+				}
+				.bottomborder();
 				.flex(row nowrap, space-between);
 				padding: 10px 0px;
-				&:nth-child(2) {
-					background-color:lightgrey;
+				&:nth-child(even) {
+					background-color:@light-background;
 				}
-
-				td,th {
+				&:last-child{
+					border-bottom: none;
+				}
+				& > * {
 					text-align: center;
 					width:19%;
 				}
@@ -141,7 +169,7 @@ body {
 	}
 	#contact {
 		width:100%;
-		background-color: darkgrey;
+		background-color: @dark-background;
 		padding: 20px;
 		color:white;
 		a {

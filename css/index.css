@@ -139,7 +139,7 @@ body {
   font-size: 20px;
   width: 90%;
   margin: auto;
-  color: black;
+  color: green;
 }
 body nav {
   font-size: 20px;
@@ -165,52 +165,77 @@ body h2 {
   padding-bottom: 10px;
 }
 body .profile-picture {
-  width: 25%;
+  width: 300px;
 }
 body #home {
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
-  background: lightgrey;
+  background: hsl(39, 100%, 90%);
   margin: auto;
   padding: 20px;
+}
+@media (max-width:500px) {
+  body #home {
+    text-align: center;
+  }
+  body #home * {
+    width: 100%;
+  }
 }
 body #home h1 {
   font-size: 90px;
 }
 body #home h2 {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid green;
 }
 body #about {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
 }
+@media (max-width:500px) {
+  body #about {
+    flex-flow: column nowrap;
+  }
+}
 body #about > * {
   width: 48%;
 }
+@media (max-width:500px) {
+  body #about > * {
+    width: 100%;
+  }
+}
 body #about ul li {
-  border: 1px solid lightgrey;
+  border: 1px solid hsl(39, 100%, 90%);
   padding: 15px;
 }
 body #experience table {
   width: 100%;
-  border-bottom: 1px solid black;
-  border-top: 1px solid black;
+  border-bottom: 1px solid green;
+  border-top: 1px solid green;
 }
 body #experience table tr {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid green;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
   padding: 10px 0px;
 }
-body #experience table tr:nth-child(2) {
-  background-color: lightgrey;
+@media (max-width:500px) {
+  body #experience table tr :last-child {
+    display: none;
+  }
 }
-body #experience table tr td,
-body #experience table tr th {
+body #experience table tr:nth-child(even) {
+  background-color: hsl(39, 100%, 90%);
+}
+body #experience table tr:last-child {
+  border-bottom: none;
+}
+body #experience table tr > * {
   text-align: center;
   width: 19%;
 }
@@ -219,7 +244,7 @@ body #experience table tr th {
 }
 body #contact {
   width: 100%;
-  background-color: darkgrey;
+  background-color: hsl(39, 100%, 50%);
   padding: 20px;
   color: white;
 }
