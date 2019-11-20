@@ -89,6 +89,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -133,4 +134,95 @@ table {
 html,
 body {
   height: 100%;
+}
+body {
+  font-size: 20px;
+  width: 90%;
+  margin: auto;
+  color: black;
+}
+body nav {
+  font-size: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+body nav * {
+  color: inherit;
+  margin-left: 20px;
+}
+body section {
+  margin: 20px auto;
+  width: 95%;
+}
+body h1 {
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+body h2 {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+body .profile-picture {
+  width: 25%;
+}
+body #home {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  background: lightgrey;
+  margin: auto;
+  padding: 20px;
+}
+body #home h1 {
+  font-size: 90px;
+}
+body #home h2 {
+  border-bottom: 1px solid black;
+}
+body #about {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+body #about > * {
+  width: 48%;
+}
+body #about ul li {
+  border: 1px solid lightgrey;
+  padding: 15px;
+}
+body #experience table {
+  width: 100%;
+  border-bottom: 1px solid black;
+  border-top: 1px solid black;
+}
+body #experience table tr {
+  border-bottom: 1px solid grey;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+body #experience table tr:nth-child(2) {
+  background-color: lightgrey;
+}
+body #experience table tr td,
+body #experience table tr th {
+  text-align: center;
+  width: 19%;
+}
+body #experience table tr th {
+  font-weight: bold;
+}
+body #contact {
+  width: 100%;
+  background-color: darkgrey;
+  padding: 20px;
+  color: white;
+}
+body #contact a {
+  color: inherit;
 }
