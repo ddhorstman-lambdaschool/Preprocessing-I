@@ -89,6 +89,7 @@ video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  text-decoration: none;
 }
 /* HTML5 display-role reset for older browsers */
 article,
@@ -133,4 +134,120 @@ table {
 html,
 body {
   height: 100%;
+}
+body {
+  font-size: 20px;
+  width: 90%;
+  margin: auto;
+  color: green;
+}
+body nav {
+  font-size: 20px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+body nav * {
+  color: inherit;
+  margin-left: 20px;
+}
+body section {
+  margin: 20px auto;
+  width: 95%;
+}
+body h1 {
+  font-size: 50px;
+  padding-bottom: 20px;
+}
+body h2 {
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+body .profile-picture {
+  width: 300px;
+}
+body #home {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  background: hsl(39, 100%, 90%);
+  margin: auto;
+  padding: 20px;
+}
+@media (max-width:500px) {
+  body #home {
+    text-align: center;
+  }
+  body #home * {
+    width: 100%;
+  }
+}
+body #home h1 {
+  font-size: 90px;
+}
+body #home h2 {
+  border-bottom: 1px solid green;
+}
+body #about {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+@media (max-width:500px) {
+  body #about {
+    flex-flow: column nowrap;
+  }
+}
+body #about > * {
+  width: 48%;
+}
+@media (max-width:500px) {
+  body #about > * {
+    width: 100%;
+  }
+}
+body #about ul li {
+  border: 1px solid hsl(39, 100%, 90%);
+  padding: 15px;
+}
+body #experience table {
+  width: 100%;
+  border-bottom: 1px solid green;
+  border-top: 1px solid green;
+}
+body #experience table tr {
+  border-bottom: 1px solid green;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+@media (max-width:500px) {
+  body #experience table tr :last-child {
+    display: none;
+  }
+}
+body #experience table tr:nth-child(even) {
+  background-color: hsl(39, 100%, 90%);
+}
+body #experience table tr:last-child {
+  border-bottom: none;
+}
+body #experience table tr > * {
+  text-align: center;
+  width: 19%;
+}
+body #experience table tr th {
+  font-weight: bold;
+}
+body #contact {
+  width: 100%;
+  background-color: hsl(39, 100%, 50%);
+  padding: 20px;
+  color: white;
+}
+body #contact a {
+  color: inherit;
 }
